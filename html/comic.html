@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial=0">
+	<title>COMIC</title>
+	<meta name="keywords" content="風の草原, 樹土風, 樹土, 東方, 東方project, 東方狂天狗, 天狗, マフラー天子">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../css/index.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../css/comic.css" media="all" />
+
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/jquery.bgswitcher.js"></script>
+
+</head>
+<body>
+	<!-- ========== header ========== -->
+	<div class="header fixbar clearfix">
+		<div class="fixbar">
+			<nav class="headNav clearfix">
+				<ul class="headNav_ul">
+					<li><a href="../index.html">TOP</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+				</ul>
+			</nav>
+			<div class="logoinnr"><a href="../index.html"><img src="../img/logo.png" alt="ロゴ" class="logo"></a></div>
+			<nav class="headNav clearfix">
+				<ul class="headNav_ul">
+					<li><a href="blog.html">BLOG</a></li>
+					<li><a href="illust.html">ILLUST</a></li>
+					<li><a href="comic.html" class="nowPage">COMIC</a></li>
+				</ul>
+			</nav>
+			<div id="js_headNavButton" class="headNavButton">≡</div>
+			<nav id="js_spNav" class="spNav">
+				<ul class="spNav_ul">
+					<li><a href="../index.html">TOP</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li><a href="blog.html">BLOG</a></li>
+					<li><a href="illust.html">ILLUST</a></li>
+					<li><a href="comic.html" class="nowPage">COMIC</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div><!-- /header -->
+
+	<!-- ========== main ========== -->
+	<div class="main">
+	</div><!-- /main -->
+	<div id="js_backToTop"><a href="#" class="back_to_top">⬆️</a></div>
+
+	<!-- ========== footer ========== -->
+	<div class="footer clearfix">
+		<p class="copyright">© 2015 KAZENOSOUGEN All Rights Reserved.</p>
+		<nav class="fotNav">
+			<ul class="fotNav_ul">
+				<li><a href="../index.html">TOP</a></li>
+				<li><a href="about.html">ABOUT</a></li>
+				<li><a href="blog.html">BLOG</a></li>
+				<li><a href="illust.html">ILLUST</a></li>
+				<li><a href="comic.html" class="nowPage">COMIC</a></li>
+			</ul>
+		</nav>
+	</div><!-- /footer -->
+
+	<script type="text/javascript">
+
+		$(function(){
+			// SPプルダウンメニュー
+			$("#js_spNav").css("display","none");
+			$("#js_headNavButton").on("click", function() {
+				$("#js_spNav").slideToggle();
+			});
+
+			// スクロール固定メニュー
+			$(window).on('scroll', function() {
+				if ($(this).scrollTop() > 50) {
+					$('.header').addClass('fixed');
+				} else {
+					$('.header').removeClass('fixed');
+				}
+			});
+
+			// ページトップへ戻る
+			// js_backToTopを消す
+			$('#js_backToTop').hide();
+			// スクロールが十分されたらjs_backToTopを表示、スクロールが戻ったら非表示する
+			$(window).scroll(function() {
+				$('#pos').text($(this).scrollTop());
+				if ($(this).scrollTop() > 60) {
+					$('#js_backToTop').fadeIn();
+				} else {
+					$('#js_backToTop').fadeOut();
+				}
+			});
+			// js_backToTopがクリックされたら上に戻る
+			$('#js_backToTop').click(function() {
+				$('body').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
+			});
+		});
+
+	</script>
+</body>
+</html>

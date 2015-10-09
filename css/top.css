@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/* ========== main ========== */
+.main {
+	height: 520px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	background-position: center;
+	background-color: #113285;
+}
+.mainRight {
+	display: none;
+	width: 250px;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.side {
+	padding: 45px 0 0 45px;
+	width: 120px;
+}
+.side_ul {
+}
+.side_ul > li {
+	margin-top: 20px;
+	border-bottom: 1px solid #000;
+}
+.side_ul > li:first-child {
+	margin-top: 0;
+	border-bottom: none;
+}
+.side_ul > li:hover {
+	border-bottom: 1px solid #EB7A77;
+}
+.side_ul > li:first-child:hover {
+	border-bottom: none;
+}
+
+
+/* レスポンシブの設定 */
+@media all and (min-width: 768px) {
+	.mainRight {
+		display: block;
+	}
+}
