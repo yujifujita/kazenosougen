@@ -10,14 +10,8 @@
 
 /* ========== main ========== */
 .main {
-	height: 2220px;
 	overflow: hidden;
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	     -o-background-size: cover;
-	        background-size: cover;
-	background-position: center;
-	background-color: #113285;
+	background-color: #696969;
 }
 .mainRight {
 	display: none;
@@ -40,8 +34,22 @@
 .back_to_top:hover {
 	background-color: rgba(203, 27, 69, 1);
 }
-
-
+.mainLi_ul {
+	text-align: center;
+}
+.mainLi_ul > li {
+	display: inline-block;
+}
+.manga {
+	margin: 20px 30px 10px 30px;
+	width: 150px;
+	height: 200px;
+	background-color: #000;
+}
+.mangaTitle {
+	font-size: 18px;
+	color: #FFF;
+}
 /* レスポンシブの設定 */
 @media all and (min-width: 768px) {
 	.mainRight {

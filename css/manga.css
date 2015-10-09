@@ -1,0 +1,47 @@
+@charset "utf-8";
+body {
+	background-color: #696969;
+}
+.back {
+	margin: 20px 20px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #FFF;
+	width: 100px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	background-color: rgba(28, 28, 28, 0.8);
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+}
+.back:hover {
+	background-color: rgba(28, 28, 28, 1);
+}
+.backTxt {
+	text-decoration: none;
+	color: #FFF;
+}
+	/* mangaviewer css */
+	#viewer {
+		background-color: #696969;
+		margin-top: 30px;
+	}
+	#viewer .sheet{
+		width:100%;
+		text-align:center;
+	}
+	#viewer img{
+		width:400px;
+		cursor:pointer;
+	}
+
+	#viewer #page-link{
+		clear:both;
+		text-align:center;
+	}
+	#viewer #page-link .btn.active{
+		border: inset 2px #086A87;
+		background-color:#2E9AFE;
+	}
+	/* mangaviewer css */

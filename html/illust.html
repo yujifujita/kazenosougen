@@ -8,9 +8,11 @@
 	<link rel="stylesheet" type="text/css" href="../css/reset.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="../css/index.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="../css/illust.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../css/lightbox.css" media="all" />
 
 	<script type="text/javascript" src="../js/jquery.js"></script>
 	<script type="text/javascript" src="../js/jquery.bgswitcher.js"></script>
+
 
 </head>
 <body>
@@ -46,6 +48,51 @@
 
 	<!-- ========== main ========== -->
 	<div class="main">
+		<div class="content">
+			<ul>
+				<li><a href="../img/top.png" rel="lightbox[group]"><img src="../img/logo.png" /></a></li>
+				<li>トマト</li>
+				<li>キャベツ</li>
+				<li>もやし</li>
+			</ul>
+		</div><!-- / .content -->
+		<div class="more">もっと見る</div>
+		<div class="content">
+			<ul>
+				<li><a href="../img/top.png" rel="lightbox[group]"><img src="../img/logo.png" /></a></li>
+				<li>トマト</li>
+				<li>キャベツ</li>
+				<li>もやし</li>
+			</ul>
+		</div><!-- / .content -->
+		<div class="more">もっと見る</div>
+		<div class="content">
+			<ul>
+				<li><a href="../img/top.png" rel="lightbox[group]"><img src="../img/logo.png" /></a></li>
+				<li>トマト</li>
+				<li>キャベツ</li>
+				<li>もやし</li>
+			</ul>
+		</div><!-- / .content -->
+		<div class="more">もっと見る</div>
+		<div class="content">
+			<ul>
+				<li><a href="../img/top.png" rel="lightbox[group]"><img src="../img/logo.png" /></a></li>
+				<li>トマト</li>
+				<li>キャベツ</li>
+				<li>もやし</li>
+			</ul>
+		</div><!-- / .content -->
+		<div class="more">もっと見る</div>
+		<div class="content">
+			<ul>
+				<li><a href="../img/top.png" rel="lightbox[group]"><img src="../img/logo.png" /></a></li>
+				<li>トマト</li>
+				<li>キャベツ</li>
+				<li>もやし</li>
+			</ul>
+		</div><!-- / .content -->
+
 	</div><!-- /main -->
 	<div id="js_backToTop"><a href="#" class="back_to_top">⬆️</a></div>
 
@@ -102,6 +149,18 @@
 			});
 		});
 
+		// もっと見る
+		$(function(){
+			$('.content:not(.content:first-of-type)').css('display','none');//一番上の要素以外を非表示
+			$('.more').nextAll('.more').css('display','none');//ボタンを非表示
+			$('.more').on('click', function() {
+				$(this).css('display','none');//押したボタンを非表示
+				$(this).next('.content').slideDown('fast');
+				$(this).nextAll('.more:first').css('display','block'); //次のボタンを表示
+			});
+		});
+
 	</script>
+	<script type="text/javascript" src="../js/lightbox.min.js"></script>
 </body>
 </html>

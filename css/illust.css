@@ -9,13 +9,6 @@
 }
 /* ========== main ========== */
 .main {
-	height: 2220px;
-	overflow: hidden;
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	     -o-background-size: cover;
-	        background-size: cover;
-	background-position: center;
 	background-color: #113285;
 }
 .mainRight {
