@@ -9,14 +9,15 @@
 }
 /* ========== main ========== */
 .main {
-	height: 2220px;
+	padding: 20px;
 	overflow: hidden;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	     -o-background-size: cover;
 	        background-size: cover;
 	background-position: center;
-	background-color: #113285;
+	background-color: #fff;
+	font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
 }
 .mainRight {
 	display: none;
@@ -31,16 +32,75 @@
 	background-color: rgba(120, 120, 120, 0.5);
 	border-radius: 5px;
 	color: #FFF;
-	text-align: center;
-	line-height: 40px;
 	right: 20px;
 	bottom: 90px;
 }
 .back_to_top:hover {
 	background-color: rgba(203, 27, 69, 1);
 }
-
-
+.arrow {
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 20px solid #fff;
+	opacity: 0.8;
+}
+.profile {
+	margin-bottom: 20px;
+	padding: 20px;
+	background-color: #FFF;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+}
+.p_name {
+	display: inline-block;
+	font-size: 25px;
+}
+.p_nameRuby {
+	margin-left: 30px;
+	display: inline-block;
+	font-size: 15px;
+}
+.p_mainTxt {
+	margin-top: 20px;
+	font-size: 14px;
+}
+.more {
+	margin: 0 auto;
+	width: 150px;
+	background-color: #FFF;
+	text-align: center;
+	line-height: 30px;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+	border: 1px solid #000;
+	font-size: 12px;
+	cursor: pointer;
+}
+.content {
+	padding: 20px;
+}
+.form {
+	text-align: left;
+}
+.f_box {
+	margin: 5px;
+}
+.i_dec {
+	width: 300px;
+	height: 30px;
+}
+.t_dec {
+	margin-top: 20px;
+	font-size: 16px;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+}
 /* レスポンシブの設定 */
 @media all and (min-width: 768px) {
 	.mainRight {

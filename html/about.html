@@ -11,6 +11,7 @@
 
 	<script type="text/javascript" src="../js/jquery.js"></script>
 	<script type="text/javascript" src="../js/jquery.bgswitcher.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
 
 </head>
 <body>
@@ -46,8 +47,52 @@
 
 	<!-- ========== main ========== -->
 	<div class="main">
+		<div class="profile">
+			<p class="p_name">樹土 風</p>
+			<p class="p_nameRuby">-jyudo fu-</p>
+
+			<hr>
+			<p class="p_mainTxt">サークル「風の草原」代表。主に「東方Project」の二次創作を行っています。<br>
+				【東方狂天狗シリーズ】や【博麗霊夢×比那名居天子】本をメインに活動。<br>
+				<br>
+				■ご依頼について<br>
+				お仕事の募集をしております。<br>
+				商業・同人問わずイラストのお仕事を募集しております、お気軽にご連絡ください。<br>
+				ご依頼を含め、その他のご連絡は、下記の連絡先、またはお問い合わせフォームよりお願い致します。<br>
+				<br>
+				jyudo.fu☆gmail.com　（☆→＠）<br>
+				<br>
+				ご希望の納期、ご予算などを明記の上、お問い合わせください。<br>
+				<br>
+				【イベント時スケッチブック受付について】<br>
+				　風の草原ではスケッチブックの受付は当日のコンディション次第ですがだいたい5冊を限度とさせて頂いております。また、スケッチブックは受け取りの際に引換券をお渡ししておりますので、引換券を無くさないよう再度スペースに来て頂ければスムーズに進みますのでご協力お願い致します。<br>
+				　なお、風の草原は一般向けサークルですのでスケッチブックにおいてもR-18のものは基本的に受け付けておりませんのでコチラもあわせてよろしくお願いします
+			</p>
+			<hr>
+			<p>2015.12.31 ... シンフォギア同人カードゲームシンフォニック・グリッド２枚寄稿</p>
+		</div>
+		<div class="more">お問い合わせはこちら▼</div>
+		<div class="content">
+			<form action="p" method="get" accept-charset="utf-8" class="form">
+				<p class="f_box">
+					名前：<input type="text" name="name" size="53" class="i_dec">
+				</p>
+				<p class="f_box">
+					e-mail:<input type="email" name="email" size="40" class="i_dec">
+				</p>
+				<p class="f_box">
+					件名：<input type="text" name="name" size="53" class="i_dec">
+				</p>
+				<p class="f_box">
+					<textarea name="about" rows="10" cols="60" placeholder="お問い合わせ内容" class="t_dec"></textarea>
+				</p>
+				<p class="f_button">
+					<input type="submit" name="submit" value="送信"><input type="reset" name="reset" value="リセット">
+				</p>
+			</form>
+		</div><!-- /content -->
 	</div><!-- /main -->
-	<div id="js_backToTop"><a href="#" class="back_to_top">⬆️</a></div>
+	<div id="js_backToTop"><a href="#" class="back_to_top"><div class="arrow"></div></a></div>
 
 	<!-- ========== footer ========== -->
 	<div class="footer clearfix">
@@ -62,46 +107,5 @@
 			</ul>
 		</nav>
 	</div><!-- /footer -->
-
-	<script type="text/javascript">
-
-		$(function(){
-			// SPプルダウンメニュー
-			$("#js_spNav").css("display","none");
-			$("#js_headNavButton").on("click", function() {
-				$("#js_spNav").slideToggle();
-			});
-
-			// スクロール固定メニュー
-			$(window).on('scroll', function() {
-				if ($(this).scrollTop() > 50) {
-					$('.header').addClass('fixed');
-				} else {
-					$('.header').removeClass('fixed');
-				}
-			});
-
-			// ページトップへ戻る
-			// js_backToTopを消す
-			$('#js_backToTop').hide();
-			// スクロールが十分されたらjs_backToTopを表示、スクロールが戻ったら非表示する
-			$(window).scroll(function() {
-				$('#pos').text($(this).scrollTop());
-				if ($(this).scrollTop() > 60) {
-					$('#js_backToTop').fadeIn();
-				} else {
-					$('#js_backToTop').fadeOut();
-				}
-			});
-			// js_backToTopがクリックされたら上に戻る
-			$('#js_backToTop').click(function() {
-				$('body').animate({
-					scrollTop: 0
-				}, 500);
-				return false;
-			});
-		});
-
-	</script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 /* ========== ＜共通設定＞ ========== */
 body {
 	font-size: 16px;
-	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', Arial, "Helvetica Neue", Helvetica, sans-serif,'游ゴシック体', 'YuGothic';
 	background-color: #fff;
 	color: #000;
 }

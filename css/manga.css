@@ -3,7 +3,8 @@ body {
 	background-color: #696969;
 }
 .back {
-	margin: 20px 20px;
+	float: left;
+	margin: 20px;
 	font-size: 20px;
 	font-weight: bold;
 	color: #FFF;
@@ -18,9 +19,25 @@ body {
 .back:hover {
 	background-color: rgba(28, 28, 28, 1);
 }
+.arrow {
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 20px solid #fff;
+	opacity: 0.8;
+}
 .backTxt {
 	text-decoration: none;
 	color: #FFF;
+}
+.twitter-share-button {
+	float: right;
+	margin: 40px;
 }
 	/* mangaviewer css */
 	#viewer {
