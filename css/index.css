@@ -4,7 +4,7 @@
 body {
 	font-size: 16px;
 	font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', Arial, "Helvetica Neue", Helvetica, sans-serif,'游ゴシック体', 'YuGothic';
-	background-color: #fff;
+	background-image: url(../img/bg.jpg);
 	color: #000;
 }
 a {
@@ -12,14 +12,21 @@ a {
 	text-decoration: none;
 	color: #000;
 }
-a:link { color: #fff; }
-a:hover { color: #EEA9A9; }
-a:active { color: #e6e6e6; }
-
+a:hover {
+	color: #CB1B45;
+	font-weight: bold;
+}
 .nowPage {
 	color: #113285;
 	font-weight: bold;
 	border-bottom: 2px solid;
+}
+
+.fade {
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
 }
 /* ========== header ========== */
 .header {
@@ -27,9 +34,12 @@ a:active { color: #e6e6e6; }
 	padding-top: 10px;
 	text-align: center;
 	height: 100px;
+	background-color: #FFF;
+	z-index: 1;
 }
 .header .fixbar {
 	position: absolute;
+	height: 100px;
 	background-color: #fff;
 	width: 100%;
 }
@@ -73,9 +83,25 @@ a:active { color: #e6e6e6; }
 	line-height: 40px;
 	cursor: pointer;
 }
+.a_headNavButton:before, .a_headNavButton:after {
+	display: block;
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	width: 20px;
+	height: 4px;
+	background: #fff;
+}
+.a_headNavButton:before {
+	margin-top: -6px;
+}
+.a_headNavButton:after {
+	margin-top: 2px;
+}
 .spNav {
 	position: absolute;
-	top: 104px;
+	top: 100px;
 	right: 0;
 	display: block;
 	text-align: center;
@@ -92,8 +118,9 @@ a:active { color: #e6e6e6; }
 	border-bottom: none;
 }
 /* ========== fotter ========== */
-.fotter {
+.footer {
 	height: 60px;
+	background-color: #FFF;
 	overflow: hidden;
 }
 .copyright {
@@ -156,6 +183,5 @@ main:765px
 	}
 	.copyright {
 		float: left;
-		text-align: none;
 	}
 }

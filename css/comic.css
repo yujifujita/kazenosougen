@@ -4,18 +4,14 @@
 .spNav_ul > li:first-child {
 	border-bottom: 1px solid #000;
 }
-.spNav_ul > li:last-child {
+.spNav_ul > li:nth-child(4) {
 	border-bottom: none;
 }
 
 /* ========== main ========== */
-h2 {
-	color: #FFF;
-}
 .main {
 	overflow: hidden;
-	background-color: #52433d;
-	padding: 20px 0;
+	padding: 20px;
 	font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
 }
 .mainRight {
@@ -66,19 +62,45 @@ h2 {
 .kyoutengu0 {
 	background-image: url(../comic/kyoutengu0/kyoutengu0.jpg);
 }
+.kyoutengu1 {
+	background-image: url(../comic/kyoutengu1/kyoutengu1.jpg);
+}
+.kyoutengu2 {
+	background-image: url(../comic/kyoutengu2/kyoutengu2.jpg);
+}
+.kyoutengu3 {
+	background-image: url(../comic/kyoutengu3/kyoutengu3.jpg);
+}
+.kyoutengu4 {
+	background-image: url(../comic/kyoutengu4/kyoutengu4.jpg);
+}
+.kyoutengu5 {
+	background-image: url(../comic/kyoutengu5/kyoutengu5.jpg);
+}
+.kyoutenguLast {
+	background-image: url(../comic/kyoutenguLast/kyoutenguLast.jpg);
+}
+.kimikimi {
+	background-image: url(../comic/kimikimi/kimikimi.jpg);
+}
+.hinekuremon {
+	background-image: url(../comic/hinekuremon/hinekuremon.jpg);
+}
+.mahounoresipi {
+	background-image: url(../comic/mahounoresipi/mahounoresipi.jpg);
+}
 .mangainner {
 	-webkit-background-size: cover;
 	     -o-background-size: cover;
 	        background-size: cover;
 	background-position: center;
-	opacity: 1;
 }
 .mangainner:hover {
+	background-color: #000;
 	opacity: 0.5;
 }
 .mangaTitle {
 	font-size: 18px;
-	color: #FFF;
 }
 /* レスポンシブの設定 */
 @media all and (min-width: 768px) {

@@ -8,12 +8,17 @@
 	<link rel="stylesheet" type="text/css" href="../css/reset.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="../css/index.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="../css/blog.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../css/animsition.css">
 
 	<script type="text/javascript" src="../js/jquery.js"></script>
 	<script type="text/javascript" src="../js/jquery.bgswitcher.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
+	<script type="text/javascript" src="../js/animsition.min.js"></script>
 
 </head>
 <body>
+<div id="fb-root"></div>
+<div class="txt js-txt"></div>
 	<!-- ========== header ========== -->
 	<div class="header fixbar clearfix">
 		<div class="fixbar">
@@ -45,7 +50,8 @@
 	</div><!-- /header -->
 
 	<!-- ========== main ========== -->
-	<div class="main">
+	<div class="main animsition">
+	<div class="fb-page" data-href="https://www.facebook.com/tabroomjp" data-width="500" data-height="300" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/tabroomjp"><a href="https://www.facebook.com/tabroomjp">TABROOM(タブルーム)</a></blockquote></div></div>
 	</div><!-- /main -->
 	<div id="js_backToTop"><a href="#" class="back_to_top"><div class="arrow"></div></a></div>
 
@@ -62,45 +68,26 @@
 			</ul>
 		</nav>
 	</div><!-- /footer -->
-
 	<script type="text/javascript">
-
-		$(function(){
-			// SPプルダウンメニュー
-			$("#js_spNav").css("display","none");
-			$("#js_headNavButton").on("click", function() {
-				$("#js_spNav").slideToggle();
-			});
-
-			// スクロール固定メニュー
-			$(window).on('scroll', function() {
-				if ($(this).scrollTop() > 50) {
-					$('.header').addClass('fixed');
-				} else {
-					$('.header').removeClass('fixed');
-				}
-			});
-
-			// ページトップへ戻る
-			// js_backToTopを消す
-			$('#js_backToTop').hide();
-			// スクロールが十分されたらjs_backToTopを表示、スクロールが戻ったら非表示する
-			$(window).scroll(function() {
-				$('#pos').text($(this).scrollTop());
-				if ($(this).scrollTop() > 60) {
-					$('#js_backToTop').fadeIn();
-				} else {
-					$('#js_backToTop').fadeOut();
-				}
-			});
-			// js_backToTopがクリックされたら上に戻る
-			$('#js_backToTop').click(function() {
-				$('body').animate({
-					scrollTop: 0
-				}, 500);
-				return false;
-			});
-		});
+		// ページ推移アニメーション
+				$(document).ready(function() {
+					$(".animsition").animsition({
+						inClass:	'fade-in-right',
+						outClass:	'fade-out-left',
+						inDuration:	1000,
+						outDuration:	800,
+						linkElement:	'.animsition-link',
+						//e.g.linkElement:'a:not([target="_blank"]):not([href^=#])'
+						touchSupport: 	true,
+						loading:	true,
+						loadingParentElement:	'body', //animsitionwrapperelement
+						loadingClass:	'animsition-loading',
+						unSupportCss:	['animation-duration',
+										'-webkit-animation-duration',
+										'-o-animation-duration'
+										]
+					});
+				});
 
 	</script>
 </body>
